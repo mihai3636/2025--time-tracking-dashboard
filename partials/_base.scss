@@ -6,3 +6,22 @@ body {
   font-weight: var(--fw-normal);
   line-height: 1.5;
 }
+
+.container {
+  background-color: var(--clr-grey-1);
+  padding-block-start: var(--sp-10);
+  padding-inline: var(--sp-6);
+  min-height: 100svh;
+}
+
+.dashboard {
+  display: grid;
+
+  row-gap: var(--sp-6);
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

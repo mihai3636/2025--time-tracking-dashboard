@@ -1,0 +1,93 @@
+@use "./utils" as *;
+
+.card {
+  position: relative;
+  border-radius: var(--br-1);
+  overflow: hidden;
+  padding-block-start: toRem(38px);
+
+  &.card--work {
+    background-color: var(--clr-work);
+  }
+
+  &.card--play {
+    background-color: var(--clr-play);
+  }
+
+  &.card--study {
+    background-color: var(--clr-study);
+  }
+
+  &.card--exercise {
+    background-color: var(--clr-exercise);
+  }
+
+  &.card--social {
+    background-color: var(--clr-social);
+  }
+
+  &.card--self-care {
+    background-color: var(--clr-self-care);
+  }
+
+  & > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    transform: translateY(-10%) translateX(-30%);
+  }
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  background-color: var(--clr-grey-2);
+  border-radius: var(--br-1);
+
+  padding-inline: var(--sp-7);
+  padding-block: var(--sp-6);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-block-end: var(--sp-3);
+}
+
+.card-title {
+  color: var(--clr-white);
+}
+
+.btn--dots {
+  svg {
+    color: var(--clr-grey-4);
+  }
+
+  &:hover,
+  &:active {
+    svg {
+      color: var(--clr-white);
+    }
+  }
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-current {
+  color: var(--clr-white);
+  font-size: var(--fs-8);
+
+  font-weight: var(--fw-thin);
+}
+
+.time-previous {
+  color: var(--clr-grey-3);
+  font-size: var(--fs-4);
+}

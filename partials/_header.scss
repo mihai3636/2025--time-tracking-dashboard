@@ -1,0 +1,53 @@
+@use "./utils" as *;
+
+.header {
+  background-color: var(--clr-grey-2);
+  border-radius: var(--br-1);
+  overflow: hidden;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  border-radius: var(--br-1);
+
+  padding: var(--sp-7);
+
+  background-color: var(--clr-primary);
+}
+
+.header-title img {
+  width: toRem(70px);
+
+  border: #{toRem(2px)} solid var(--clr-white);
+  border-radius: 50%;
+}
+
+.title-label {
+  color: var(--clr-grey-4);
+  font-size: var(--fs-3);
+}
+
+.title {
+  color: var(--clr-white);
+  font-size: var(--fs-6);
+}
+
+.header-tabs {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--sp-6);
+  padding-inline: var(--sp-7);
+}
+
+.btn--tab {
+  color: var(--clr-grey-3);
+  transition: color 0.2s;
+
+  &:hover,
+  &:active,
+  &.selected {
+    color: var(--clr-white);
+  }
+}
