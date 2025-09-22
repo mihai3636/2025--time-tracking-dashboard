@@ -73,3 +73,8 @@
 
   --br-1: #{toRem(20px)};
 }
+
+$bp-desktop: toRem(1200px);
+
+$card-phone-width: toRem(290px);
+$card-desktop-width: toRem(255px);

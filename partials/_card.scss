@@ -1,4 +1,5 @@
 @use "./utils" as *;
+@use "./variables" as *;
 
 .card {
   position: relative;
@@ -38,6 +39,10 @@
 
     transform: translateY(-10%) translateX(-30%);
   }
+
+  @media (min-width: $bp-desktop) {
+    padding-block-start: var(--sp-8);
+  }
 }
 
 .card-content {
@@ -48,6 +53,10 @@
 
   padding-inline: var(--sp-7);
   padding-block: var(--sp-6);
+
+  @media (min-width: $bp-desktop) {
+    padding-block-end: var(--sp-7);
+  }
 }
 
 .card-header {
@@ -55,6 +64,10 @@
   justify-content: space-between;
 
   margin-block-end: var(--sp-3);
+
+  @media (min-width: $bp-desktop) {
+    margin-block-end: var(--sp-5);
+  }
 }
 
 .card-title {
@@ -78,6 +91,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $bp-desktop) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .time-current {
@@ -85,6 +103,10 @@
   font-size: var(--fs-8);
 
   font-weight: var(--fw-thin);
+
+  @media (min-width: $bp-desktop) {
+    font-size: var(--fs-10);
+  }
 }
 
 .time-previous {
