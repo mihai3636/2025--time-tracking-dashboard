@@ -1,5 +1,3 @@
-console.log("Hello world!");
-
 let cardsData = [];
 
 const tabs = document.querySelectorAll(".btn--tab");
@@ -40,7 +38,6 @@ function removeSelectionFromAllTabs() {
 }
 
 function updateData(selectedTabName) {
-  console.log("Update data called");
   cardsData.forEach((cardData) => {
     updateCardEl(
       cardData.title,
