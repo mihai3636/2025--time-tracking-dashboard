@@ -8,7 +8,9 @@ const classSpinnerVisible = "overlay--visible";
 const overlaySpinnerEl = document.getElementById("overlaySpinner");
 
 let selectedTab = tabs[0].textContent;
+
 initTabs();
+populateCardsEl();
 
 function toggleSpinner() {
   overlaySpinnerEl.classList.toggle(classSpinnerVisible);
@@ -62,17 +64,19 @@ function updateCardEl(cardName, times) {
   timePreviousEl.textContent = times.previous;
 }
 
-toggleSpinner();
-fetch("data.json")
-  .then((response) => {
-    if (!response.ok) return console.log("Oops! Something went wrong!");
+function populateCardsEl() {
+  toggleSpinner();
+  fetch("data.json")
+    .then((response) => {
+      if (!response.ok) return console.log("Oops! Something went wrong!");
 
-    return response.json();
-  })
-  .then((data) => {
-    cardsData = data;
-    setTimeout(() => {
-      updateData(selectedTab);
-      toggleSpinner();
-    }, 1000);
-  });
+      return response.json();
+    })
+    .then((data) => {
+      cardsData = data;
+      setTimeout(() => {
+        updateData(selectedTab);
+        toggleSpinner();
+      }, 1000);
+    });
+}
