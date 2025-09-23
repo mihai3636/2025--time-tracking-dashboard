@@ -6,6 +6,8 @@ body {
   font-size: var(--fs-default);
   font-weight: var(--fw-normal);
   line-height: 1.5;
+
+  position: relative;
 }
 
 .container {
@@ -38,4 +40,23 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.overlay--visible {
+  display: flex;
 }
